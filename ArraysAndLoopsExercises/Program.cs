@@ -136,7 +136,19 @@ namespace ArraysAndLoopsExercises
             Console.WriteLine("FIND THE SMALLEST NUMBER IN AN ARRAY\n");
 
             // Enter your solution here
+            List<int> userValues = new List<int>();
 
+            for (int i = 0; i < 5; i++)
+            {
+
+                Console.WriteLine("Please enter a number: ");
+                int userInput = int.Parse(Console.ReadLine());
+                userValues.Add(userInput);
+
+            }
+
+            userValues.Sort();
+            Console.Write("The smallest number is: " + userValues[0]);
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
         }
