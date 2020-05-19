@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace ArraysAndLoopsExercises
 {
@@ -64,11 +66,32 @@ namespace ArraysAndLoopsExercises
         {
             // Ask 10 people for their favorite numbers and create an array of those numbers. 
             // Order the numbers using the sort method. Print the first and last numbers.
+            Dictionary<int, int> userFavoriteNumber = new Dictionary<int, int>();
+            //List<int> personNumbers = new List<int>();
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine("Please enter your favorite number for person number (" + i + "):");
+                int userInput = int.Parse(Console.ReadLine());
+                
+                userFavoriteNumber.Add(i, userInput);
+
+            }
+
+
+           
+
+           
 
             Console.Clear();
             Console.WriteLine("SORT THE NUMBERS\n");
 
             // Enter your solution here
+
+            List<int> sortedValues = userFavoriteNumber.Values.ToList();
+            sortedValues.Sort();
+
+            Console.WriteLine("The first value is: " + userFavoriteNumber[0]);
+            Console.WriteLine("The second value is: " + userFavoriteNumber[9]);
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
