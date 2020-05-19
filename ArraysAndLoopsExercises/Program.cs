@@ -163,6 +163,13 @@ namespace ArraysAndLoopsExercises
 
             // Enter your solution here
 
+            string[] shoppingList = { "crackers", "cheese", "apples", "carrots" };
+
+            for (int i = 0; i < shoppingList.Length; i++)
+            {
+                Console.WriteLine($"{i+1}. {shoppingList[i]}");
+            }
+
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
         }
