@@ -110,6 +110,19 @@ namespace ArraysAndLoopsExercises
 
             // Enter your solution here
 
+            string[] daysOfWeek = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
+
+            int i = 0;
+            foreach (string day in daysOfWeek)
+            {
+                i++;
+                Console.WriteLine($"{i} = {day}");
+            }
+
+            Console.WriteLine("Enter a number between 1-7");
+            int userInput = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"Output = {daysOfWeek[userInput-1]}");
+
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
         }
